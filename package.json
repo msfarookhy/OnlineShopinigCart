@@ -1,0 +1,22 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "Online Shoping Cart",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msfarookhy/OnlineShopinigCart.git"
+  },
+  "author": "Misbah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msfarookhy/OnlineShopinigCart/issues"
+  },
+  "homepage": "https://github.com/msfarookhy/OnlineShopinigCart#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
