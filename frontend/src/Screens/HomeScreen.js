@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
-import Product from "../componnets/Product";
-import Message from "../componnets/Message";
-import Loader from "../componnets/Loader";
+import Product from "../components/Product";
+import Message from "../components/Message";
+import Loader from "../components/Loader";
 import { listProducts } from "../actions/productActions";
 
 const HomeScreen = () => {
@@ -11,6 +11,7 @@ const HomeScreen = () => {
 
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
+  console.log("productlist", products);
 
   useEffect(() => {
     dispatch(listProducts());
@@ -30,6 +31,7 @@ const HomeScreen = () => {
               <Product product={product} />
             </Col>
           ))}
+          {/* <h1>noorie</h1> */}
         </Row>
       )}
     </>
