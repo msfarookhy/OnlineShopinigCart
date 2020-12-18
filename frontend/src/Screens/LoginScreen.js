@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { Form, Butoon, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
@@ -9,7 +9,7 @@ import { login } from "../actions/userActions";
 
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState("");
-  const [password, setpassword] = useState("");
+  const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
@@ -49,7 +49,7 @@ const LoginScreen = ({ location, history }) => {
             type="password"
             placeholder="Enter Your Password"
             value={password}
-            onChange={(e) => setpassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
@@ -60,9 +60,9 @@ const LoginScreen = ({ location, history }) => {
       <Row className="py-3">
         <Col>
           New Customer ?{""}
-          <Link
-            to={redirect ? `/register?redirect=${redirect}` : "/register"}
-          ></Link>
+          <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
+            Register
+          </Link>
         </Col>
       </Row>
     </FormContainer>
