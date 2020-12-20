@@ -46,7 +46,7 @@ const orderSchema = mongoose.Schema(
       default: 0.0,
     },
 
-    ShippinfPrice: {
+    shippingPrice: {
       type: Number,
       required: true,
       default: 0.0,
@@ -83,6 +83,6 @@ const orderSchema = mongoose.Schema(
   }
 );
 
-const Order = mongoose.model("Orderr", orderSchema);
+const Order = mongoose.model("Order", orderSchema);
 
 export default Order;
