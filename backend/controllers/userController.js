@@ -136,7 +136,7 @@ const getUserById = asyncHandler(async (req, res) => {
   }
 });
 
-//@des Update user
+//@des Update users
 //@des PUT /api/users/:id
 //@access  Private/admin
 const updateUser = asyncHandler(async (req, res) => {
